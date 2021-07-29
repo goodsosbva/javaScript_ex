@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<ul id="target">
+    <li>HTML</li>
+    <li>CSS</li>
+</ul>
+<input type="button" onclick="callAppendChild();" value="appendChild()" />
+<input type="button" onclick="callInsertBefore();" value="insertBefore()" />
+<input type="button" onclick="callRemoveChild();" value="removeChild()" />
+<input type="button" onclick="callReplaceChild();" value="replaceChild()" />
+<script>
+    function callAppendChild(){
+        var target = document.getElementById('target');
+        var li = document.createElement('li');
+        var text = document.createTextNode('JavaScript');
+        li.appendChild(text);
+        target.appendChild(li);
+    }
+ 
+    function callInsertBefore(){
+        var target = document.getElementById('target');
+        var li = document.createElement('li');
+        var text = document.createTextNode('jQuery');
+        li.appendChild(text);
+        target.insertBefore(li, target.firstChild);
+    }
+
+    function callRemoveChild(){
+        var target = document.getElementById('target');
+        target.parentNode.removeChild(target);
+    }
+
+    function callReplaceChild(){
+        var a = document.createElement('a');
+        a.setAttribute('href', 'http://opentutorials.org/module/904/6701');
+        a.appendChild(document.createTextNode('Web browser JavaScript'));
+ 
+        var target = document.getElementById('target');
+        target.replaceChild(a,target.firstChild);
+    }
+</script>
+
+</body>
+</html>

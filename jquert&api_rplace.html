@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div class="target" id="target1">
+    target 1
+</div>
+ 
+<div class="target" id="target2">
+    target 2
+</div>
+
+<div id="source">source</div>
+ 
+<input type="button" value="replaceAll target 1" id="btn1" />
+<input type="button" value="replaceWith target 2" id="btn2" />
+<input type="button" value="clone replaceAll target 1" id="btn3" />
+<input type="button" value="clone replaceWith target 2" id="btn4" />
+<input type="button" value="append source to target 1" id="btn5" />
+
+<script src="../jQuery/jquery-3.6.0.min.js"></script>
+<script>
+    $('#btn1').click(function(){
+        $('<div>replaceAll</div>').replaceAll('#target1');
+    })
+    $('#btn2').click(function(){
+        $('#target2').replaceWith('<div>replaceWith</div>');
+    })
+
+    $('#btn3').click(function(){
+        $('#source').clone().replaceAll('#target1');
+    })
+    $('#btn4').click(function(){
+        $('#target2').replaceWith($('#source').clone());
+    })
+     $('#btn5').click(function(){
+        $('#target1').append($('#source'));
+    })
+</script>
+</body>
+</html>

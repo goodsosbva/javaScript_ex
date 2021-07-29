@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" id="target" />
+<p id="status"></p>
+<script src="../jQuery/jquery-3.6.0.min.js"></script>
+<script>
+    $('#target').on('daum blur', function(e){
+        $('#status').html(e.type);
+    })
+</script>
+
+</body>
+</html>

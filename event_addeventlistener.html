@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="button" id="target" value="button" />
+	<input type="button" id="target1" value="button1" />
+<script>
+    var t = document.getElementById('target');
+    var t1 = document.getElementById('target1');
+    t.addEventListener('click', function(event){
+        alert('Hello world, '+event.target.value);
+    });
+    t1.addEventListener('click', function(event){
+        alert(1);
+    });
+    t1.addEventListener('click', function(event){
+        alert(2);
+    });
+
+</script>
+
+</body>
+</html>

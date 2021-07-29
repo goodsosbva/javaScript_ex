@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<a id="target" href="http://opentutorials.org">opentutorials</a>
+	<div id="t1">opentutorials</div>
+	<div id="t2">opentutorials</div>
+	<a id="t3" href="./demo.html">opentutorials</a>
+	<input id="t4" type="checkbox" checked="checked" />
+<script src="../jQuery/jquery-3.6.0.min.js"></script>
+<script>
+	var t = $('#target');
+	console.log(t.attr('href')); //http://opentutorials.org
+	t.attr('title', 'opentutorials.org'); // title 속성의 값을 설정한다.
+	t.removeAttr('title'); // title 속성을 제거한다.
+
+	
+
+	$('#t1').prop('className', 'important'); 
+	$('#t2').prop('class', 'current');  
+
+	// 현재 문서의 URL이 아래와 같다고 했을 때
+	// http://localhost/jQuery_attribute_api/demo2.html
+	var t3 = $('#t3');
+	console.log(t3.attr('href')); // ./demo.html 
+	console.log(t3.prop('href')); // http://localhost/jQuery_attribute_api/demo.html 
+ 
+	var t4 = $('#t4');
+	console.log(t4.attr('checked')); // checked
+	console.log(t4.prop('checked')); // true
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p id="timezones"></p>
+<input type="button" id="execute" value="execute" />
+<script src="../jQuery/jquery-3.6.0.min.js"></script>
+<script>
+    $('#execute').click(function(){
+        $.ajax({
+            url:'C:/sers/hs/Desktop/javascript/javaccriot_web/time3.php',
+            dataType:'json',
+            success:function(data){
+                var str = '';
+                for(var name in data){
+                    str += '<li>'+data[name]+'</li>';
+                }
+                $('#timezones').html('<ul>'+str+'</ul>');
+            }
+        })
+    })
+</script>
+
+</body>
+</html>

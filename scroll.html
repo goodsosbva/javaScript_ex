@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style>
+    body{
+        padding:0;
+        margin:0;
+    }
+    div{
+        border:50px solid #1065e6;
+        padding:50px;
+        margin:50px;
+    }
+    #target{
+        width:100px;
+        height:2000px;
+    }
+</style>
+<input type="button" id="scrollBtn" value="scroll(0, 1000)" />
+<script>
+    document.getElementById('scrollBtn').addEventListener('click', function(){
+        window.scrollTo(0, 1000);
+    })
+   console.log('window.innerWidth:', window.innerWidth, 'window.innerHeight:', window.innerHeight);
+console.log('screen.width:', screen.width, 'screen.height:', screen.height);
+</script>
+<div>
+    <div id="target">
+        Coding
+    </div>
+</div>
+
+</body>
+</html>
