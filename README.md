@@ -1,2 +1,2 @@
-# javaScript_ex
-자바스크립 예제 저장소
+# for_sutdy_javaScript_note
+자바스크립 공부 및 웹사이트 제작 기록 저장소
