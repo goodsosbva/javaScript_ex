@@ -19,4 +19,34 @@ $(document).ready(function(){
 		$(".content").removeClass("prev this next");
 		$("#container").css("max-width", "1200px");
 	});
+	// 롤링 배너 왼쪽/ 오른쪽
+	$(".roll_left").click(function(){
+		$(".book_roll li").eq(0).insertAfter(".book_roll li:last-child");
+	});
+	$(".roll_right").click(function(){
+		$(".book_roll li").eq(-1).insertBefore(".book_roll li:first-child");
+	});
+	//ajax 사용하기
+	$(".book_roll li").click(function(){
+		var _this =$(this);
+		var liurl =_this.data("url");
+		$(".notebook").html();
+		$.ajax({
+			type : 'post', //HTTP 요청 방식
+			url : liurl, //해당 url
+			dataType : 'html', //data 타입
+			success : function(data) { //HTTP 요청 성공 후 데이터 전송
+				$(".notebook").html(data);
+			}
+		});
+	});
+	$(".accordio_box ol li").click(function(){
+		$(".accordio_box ol li").removeClass("on");
+		$(this).addClass("on");
+	});
+	$(".close").click(function(){
+		$(".thankyou_message").css("display", "none");
+	});
 });
+
+
