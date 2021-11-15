@@ -5,3 +5,8 @@ index숫자랑 css숫자랑 매치되지 않습니다. 다만 그날그날 추�
 최종본 index_final.html, ui_final.css
 완성된 사이트 주소 --> http://goodsosbva.dothome.co.kr/#
 
+$. 메인 화면 모습
+
+![image](https://user-images.githubusercontent.com/62534722/141762100-51bfecf2-20eb-4f10-9160-ed128635de71.png)
+
+
